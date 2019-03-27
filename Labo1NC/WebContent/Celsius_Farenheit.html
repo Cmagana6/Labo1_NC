@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor = "0.0.255">
+
+<h2 style = "color:#ffffff;">Convertidor de Celcius a Farenheit</h2>
+
+<p style = "color:#ffffff;">Ingresa un numero en cualquiera de las dos celdas:</p>
+
+<p style = "color:#ffffff;"><input id="c" onkeyup="convert('C')"> Grados Celsius</p>
+
+<p style = "color:#ffffff;"><input id="f" onkeyup="convert('F')"> Grados Fahrenheit</p> 
+
+<script>
+function convert(degree) {
+  var x;
+  if (degree == "C") {
+    x = document.getElementById("c").value * 9 / 5 + 32;
+    document.getElementById("f").value = Math.round(x);
+  } else {
+    x = (document.getElementById("f").value -32) * 5 / 9;
+    document.getElementById("c").value = Math.round(x);
+  }
+}
+</script>
+
+</body>
+</html>
